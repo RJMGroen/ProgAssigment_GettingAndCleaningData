@@ -1,6 +1,6 @@
-Submission of the Programming Assignment of the Getting and Cleaning data course.
+##Submission of the Programming Assignment of the Getting and Cleaning data course.
 
-This repository contains a R-script called run_analysis.R that does the following.
+This repository contains a R-script called run_analysis.R and a Codebook describing the variables. The R-scrip does the following:
 
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement.

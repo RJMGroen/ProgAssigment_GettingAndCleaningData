@@ -15,7 +15,7 @@ setwd("./R/Coursera/Getting and cleaning data/Week 4")
 ##unzip(zipF)
 
 ## 1.2: Read the data into R.
-## The variable-names and activity-labels are used in both the 
+## The variable-names are used in both the 
 ## test and the training dataset
 library(dplyr)
 var_names_data<-read.table("./features.txt")
@@ -41,7 +41,7 @@ names(test_data) = var_names_corr[,3]
 names(test_subject) = "subject"
 names(test_label) = "activity_label"
 
-## Add the subject and activity-label
+## Add the subject
 train_data_total <- cbind(train_subject,train_label,train_data)
 test_data_total <- cbind(test_subject,test_label,test_data)
 

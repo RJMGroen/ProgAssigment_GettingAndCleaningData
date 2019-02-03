@@ -69,8 +69,8 @@ names(Experiment_mean_std)<-gsub('\\-', '_',names(Experiment_mean_std))
 ## Step 5: Create a second dataset with the average of each variable for 
 ## each activity and each subject
 Grouping<-group_by(Experiment_mean_std,activity,subject)
-Mean_data_experiment<-summarize_all(Grouping,mean)
-names(Mean_data_experiment)[3:68]<-paste0("avg_",names(Mean_data_experiment)[3:68])
+Data_experiment_means<-summarize_all(Grouping,mean)
+names(Data_experiment_means)[3:68]<-paste0("avg_",names(Data_experiment_means)[3:68])
 
 ##Create a text file of the last table
-##write.table(Mean_data_experiment,file="Mean_data_experiment.txt",row.names=FALSE)
+##write.table(Data_experiment_means,file="Data_experiment_means.txt",row.names=FALSE)

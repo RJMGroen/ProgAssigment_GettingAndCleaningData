@@ -18,7 +18,7 @@ setwd("./R/Coursera/Getting and cleaning data/Week 4")
 ## The variable-names and activity-labels are used in both the 
 ## test and the training dataset
 library(dplyr)
-var_names_data<-read.table("./UCI HAR Dataset/features.txt")
+var_names_data<-read.table("./features.txt")
 var_names_corr<-mutate(var_names_data, var_name = paste0(V1,V2))
 
 ## The test data is stored in three different files

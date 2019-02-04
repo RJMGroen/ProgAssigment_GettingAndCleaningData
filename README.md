@@ -1,6 +1,6 @@
 ##Submission of the Programming Assignment of the Getting and Cleaning data course.
 
-This repository contains a R-script called run_analysis.R and a Codebook describing the variables. The R-scrip does the following:
+This repository contains a R-script called run_analysis.R and a Codebook describing the variables. The R-script does the following:
 
 1. Merges the training and the test sets to create one data set.
   1.1 (Optional(if not done already)) Get the data from the Internet from                                       
@@ -26,4 +26,6 @@ This repository contains a R-script called run_analysis.R and a Codebook describ
    - The names starting with t are changed to Time_ to indicate more clearly these measurements are from the time domain.
    - The names starting with f are changed to Freq_ to indicate more clearly these measurements are from the frequency domain.
 
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each 
+   subject. This gives us a dataset with 180 rows (30 subjects x 6 activities). For every combination the average of the 66 of the 
+   measurement variables is calculated.

@@ -13,14 +13,18 @@ Programming assigment for the Getting And Cleaning Data Course
 The data was provided for this assignment. It can be found in https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 ###Notes on the original (raw) data 
-The data linked to represent data collected from the accelerometers from the Samsung Galaxy S smartphone. 
+The data linked to represents data collected from the accelerometers from the Samsung Galaxy S smartphone. The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz.
+
 A full description is available at the site where the data was obtained:
 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 ##Creating the tidy datafile
 
+The tidy dataset consists with the average of each measurement variable (mean and standard deviation) for each activity and each subject. This gives us a dataset with 180 rows (30 subjects x 6 activities). For every combination the average of the 66 of the measurement variables is calculated.
+
 ###Guide to create the tidy data file
+
 The following steps have been taken to create the tidy dataset called (in R-script) 'Data_experiment_means':
  - Download the file
  - Unzip the file and read the eight necessary text files into R
@@ -30,7 +34,8 @@ The following steps have been taken to create the tidy dataset called (in R-scri
  - Summarize the data
 
 ###Cleaning of the data
-The cleaning script (run_analysis) does the following: 
+
+The cleaning script (run_analysis.R) does the following: 
  1. It merges the training and the test sets to create one data set.
  2. It extracts only the measurements on the mean and standard deviation for each measurement. Only 'real' mean measurements are inlcuded as is the requirement. 
     Therefore weighted averages of the frequency components (meanFreq-variables) are excluded.
